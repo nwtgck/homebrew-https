@@ -5,20 +5,20 @@
 class Https < Formula
   desc "HTTP Stream CLI"
   homepage "https://github.com/nwtgck/https"
-  version "0.1.1"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/nwtgck/https/releases/download/v0.1.1/https-0.1.1-darwin-arm64.tar.gz"
-      sha256 "5126bd278c27b94145bd366229b52d182daa2dbea61a16311e94924816717d4f"
+      url "https://github.com/nwtgck/https/releases/download/v0.2.0/https-0.2.0-darwin-arm64.tar.gz"
+      sha256 "8892f26f884557298a0890338ba9f1c7dc81416664434c5ccc78330bf84fac22"
 
       def install
         bin.install "https"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/nwtgck/https/releases/download/v0.1.1/https-0.1.1-darwin-amd64.tar.gz"
-      sha256 "21407624f0c9ff8f7d151767874beda0e9c48f352be2eb1d4209139a0531efd1"
+      url "https://github.com/nwtgck/https/releases/download/v0.2.0/https-0.2.0-darwin-amd64.tar.gz"
+      sha256 "ea2f642019ff1906e0fd9fb891b6f2c69dbf38fb90772af8314947889da3ef89"
 
       def install
         bin.install "https"
@@ -27,25 +27,25 @@ class Https < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nwtgck/https/releases/download/v0.1.1/https-0.1.1-linux-arm64.tar.gz"
-      sha256 "fac132a4488a6f13360023e82ef50f0680685ddd1a033ed6891e3bc4a1b8c7e8"
-
-      def install
-        bin.install "https"
-      end
-    end
     if Hardware::CPU.intel?
-      url "https://github.com/nwtgck/https/releases/download/v0.1.1/https-0.1.1-linux-amd64.tar.gz"
-      sha256 "cdf1fe2289fb68d27291ede203274e6e3f9499466dad872f0094cb0c62879672"
+      url "https://github.com/nwtgck/https/releases/download/v0.2.0/https-0.2.0-linux-amd64.tar.gz"
+      sha256 "ec1cc785b9653256217f6e437805fee2960e1f4ce83fa0342ed55a22e862a6a5"
 
       def install
         bin.install "https"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/nwtgck/https/releases/download/v0.1.1/https-0.1.1-linux-armv6.tar.gz"
-      sha256 "bda9cfc49bd8e68f4f622f1b76441f77ad431ba85e74d7f85e86a8d3259412e5"
+      url "https://github.com/nwtgck/https/releases/download/v0.2.0/https-0.2.0-linux-armv6.tar.gz"
+      sha256 "72de4c5b9c0fc2a6d79c62ae7c87344b6ef31c5b65e06291e6a554db64a508ea"
+
+      def install
+        bin.install "https"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/nwtgck/https/releases/download/v0.2.0/https-0.2.0-linux-arm64.tar.gz"
+      sha256 "2a2137ccbacd481461186933f139d269321ad3e9081a17e7881f0051e394c044"
 
       def install
         bin.install "https"
